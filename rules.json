@@ -1,0 +1,1890 @@
+{
+  "engine_name": "Pāṇini Vyākaraṇa Sandhi Rule Engine",
+  "version": "1.0.0",
+  "author": "Pāṇini Computational Linguistics Laboratory",
+  "description": "Rule definitions for Sanskrit Sandhi based on Pāṇini's Aṣṭādhyāyī and Siddhānta Kaumudī.",
+  "categories": [
+    "Svara Sandhi (स्वरसन्धिः)",
+    "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+    "Visarga Sandhi (विसर्गसन्धिः)"
+  ],
+  "rules": [
+    {
+      "rule_id": "SVAR_01",
+      "rule_name": "Dīrgha Sandhi (दीर्घसन्धिः)",
+      "category": "Svara Sandhi (स्वरसन्धिः)",
+      "sutra": "अकः सवर्णे दीर्घः",
+      "sutra_roman": "Akaḥ savarṇe dīrghaḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.101",
+      "pratyahara": "अक् (ak) + अक् (ak) savarṇa",
+      "description": "When an 'ak' vowel (a, ā, i, ī, u, ū, ṛ, ṝ) is followed by a homogeneous (savarṇa) vowel of the same vocalic family, both vowels merge into a single prolonged (dīrgha) vowel.",
+      "transformation": "a/ā + a/ā → ā (आ); i/ī + i/ī → ī (ई); u/ū + u/ū → ū (ऊ); ṛ/ṝ + ṛ/ṝ → ṝ (ॠ)",
+      "conditions": {
+        "purva_ending": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ"
+        ],
+        "uttara_beginning": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ"
+        ],
+        "condition_type": "homogeneous_vowels"
+      },
+      "explanation": "According to sūtra 6.1.101, when any short or long vowel from the 'ak' pratyāhāra meets a savarṇa (homogeneous place and effort of articulation) vowel, the single substitute is the corresponding dīrgha (long) vowel (एकादेशः).",
+      "examples": [
+        {
+          "word1": "हिम",
+          "word2": "आलय",
+          "combined": "हिमालय",
+          "word1_iast": "hima",
+          "word2_iast": "ālaya",
+          "combined_iast": "himālaya",
+          "meaning": "abode of snow",
+          "boundary": "अ + आ → आ"
+        },
+        {
+          "word1": "विद्या",
+          "word2": "आलय",
+          "combined": "विद्यालय",
+          "word1_iast": "vidyā",
+          "word2_iast": "ālaya",
+          "combined_iast": "vidyālaya",
+          "meaning": "school / abode of knowledge",
+          "boundary": "आ + आ → आ"
+        },
+        {
+          "word1": "कपि",
+          "word2": "ईश",
+          "combined": "कपीश",
+          "word1_iast": "kapi",
+          "word2_iast": "īśa",
+          "combined_iast": "kapīśa",
+          "meaning": "lord of monkeys (Hanuman)",
+          "boundary": "इ + ई → ई"
+        },
+        {
+          "word1": "भानु",
+          "word2": "उदय",
+          "combined": "भानूदय",
+          "word1_iast": "bhānu",
+          "word2_iast": "udaya",
+          "combined_iast": "bhānūdaya",
+          "meaning": "sunrise",
+          "boundary": "उ + उ → ऊ"
+        },
+        {
+          "word1": "पितृ",
+          "word2": "ऋणम्",
+          "combined": "पितॄणम्",
+          "word1_iast": "pitṛ",
+          "word2_iast": "ṛṇam",
+          "combined_iast": "pitṝṇam",
+          "meaning": "debt to ancestors",
+          "boundary": "ऋ + ऋ → ॠ"
+        },
+        {
+          "word1": "मुर",
+          "word2": "अरि",
+          "combined": "मुरारि",
+          "word1_iast": "mura",
+          "word2_iast": "ari",
+          "combined_iast": "murāri",
+          "meaning": "enemy of demon Mura (Krishna)",
+          "boundary": "अ + अ → आ"
+        },
+        {
+          "word1": "गिरि",
+          "word2": "इन्द्र",
+          "combined": "गिरीन्द्र",
+          "word1_iast": "giri",
+          "word2_iast": "indra",
+          "combined_iast": "girīndra",
+          "meaning": "lord of mountains (Himalaya)",
+          "boundary": "इ + इ → ई"
+        }
+      ],
+      "rule_name_hi": "दीर्घ सन्धि (दीर्घसन्धिः)",
+      "rule_name_en": "Dīrgha Sandhi (दीर्घसन्धिः)",
+      "category_hi": "स्वरसन्धिः (अच्-सन्धिः)",
+      "category_en": "Svara Sandhi (स्वरसन्धिः)",
+      "description_hi": "जब 'अक्' प्रत्याहार (अ, आ, इ, ई, उ, ऊ, ऋ, ॠ) का कोई ह्रस्व या दीर्घ स्वर अपने सवर्ण (सजातीय) स्वर के समीप आता है, तब दोनों मिलकर उसी वर्ण का दीर्घ रूप बन जाते हैं।",
+      "description_en": "When an 'ak' vowel (a, ā, i, ī, u, ū, ṛ, ṝ) is followed by a homogeneous (savarṇa) vowel of the same vocalic family, both vowels merge into a single prolonged (dīrgha) vowel.",
+      "transformation_hi": "अ/आ + अ/आ → आ; इ/ई + इ/ई → ई; उ/ऊ + उ/ऊ → ऊ; ऋ/ॠ + ऋ/ॠ → ॠ",
+      "transformation_en": "a/ā + a/ā → ā (आ); i/ī + i/ī → ī (ई); u/ū + u/ū → ū (ऊ); ṛ/ṝ + ṛ/ṝ → ṝ (ॠ)",
+      "explanation_hi": "महर्षि पाणिनि के सूत्र ६.१.१०१ (अकः सवर्णे दीर्घः) के अनुसार जब 'अक्' प्रत्याहार का कोई ह्रस्व या दीर्घ स्वर समान उच्चारण-स्थान वाले सवर्ण स्वर से मिलता है, तो दोनों के स्थान पर एक दीर्घ स्वर एकादेश होता है।",
+      "explanation_en": "According to sūtra 6.1.101 (Akaḥ savarṇe dīrghaḥ), when any short or long vowel from the 'ak' pratyāhāra meets a savarṇa (homogeneous place and effort of articulation) vowel, the single substitute is the corresponding dīrgha (long) vowel."
+    },
+    {
+      "rule_id": "SVAR_02",
+      "rule_name": "Guṇa Sandhi (गुणसन्धिः)",
+      "category": "Svara Sandhi (स्वरसन्धिः)",
+      "sutra": "आद्गुणः",
+      "sutra_roman": "Ādguṇaḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.87 (with 1.1.51 Uraṇ raparaḥ)",
+      "pratyahara": "अ/आ + इक् (ik)",
+      "description": "When short or long a (a / ā) is followed by a dissimilar simple vowel (i/ī, u/ū, ṛ/ṝ, ḷ), both merge into the corresponding guṇa vowel (a, e, o; with r/l for ṛ/ḷ).",
+      "transformation": "a/ā + i/ī → e (ए); a/ā + u/ū → o (ओ); a/ā + ṛ/ṝ → ar (अर्); a/ā + ḷ → al (अल्)",
+      "conditions": {
+        "purva_ending": [
+          "अ",
+          "आ"
+        ],
+        "uttara_beginning": [
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ"
+        ],
+        "condition_type": "a_followed_by_simple_vowel"
+      },
+      "explanation": "According to sūtra 6.1.87, when an 'avarna' (a or ā) precedes an 'ic' vowel, guṇa (a, e, o as per 1.1.2 अदेंग्गुणः) is the single substitute. When ṛ is involved, sūtra 1.1.51 adds 'r' producing 'ar'.",
+      "examples": [
+        {
+          "word1": "नर",
+          "word2": "ईश",
+          "combined": "नरेश",
+          "word1_iast": "nara",
+          "word2_iast": "īśa",
+          "combined_iast": "nareśa",
+          "meaning": "king / lord of men",
+          "boundary": "अ + ई → ए"
+        },
+        {
+          "word1": "देव",
+          "word2": "इन्द्र",
+          "combined": "देवेन्द्र",
+          "word1_iast": "deva",
+          "word2_iast": "indra",
+          "combined_iast": "devendra",
+          "meaning": "king of gods (Indra)",
+          "boundary": "अ + इ → ए"
+        },
+        {
+          "word1": "महा",
+          "word2": "उत्सव",
+          "combined": "महोत्सव",
+          "word1_iast": "mahā",
+          "word2_iast": "utsava",
+          "combined_iast": "mahotsava",
+          "meaning": "great festival / celebration",
+          "boundary": "आ + उ → ओ"
+        },
+        {
+          "word1": "सूर्य",
+          "word2": "उदय",
+          "combined": "सूर्योदय",
+          "word1_iast": "sūrya",
+          "word2_iast": "udaya",
+          "combined_iast": "sūryodaya",
+          "meaning": "sunrise",
+          "boundary": "अ + उ → ओ"
+        },
+        {
+          "word1": "महा",
+          "word2": "ऋषि",
+          "combined": "महर्षि",
+          "word1_iast": "mahā",
+          "word2_iast": "ṛṣi",
+          "combined_iast": "maharṣi",
+          "meaning": "great sage (Maharshi)",
+          "boundary": "आ + ऋ → अर्"
+        },
+        {
+          "word1": "देव",
+          "word2": "ऋषि",
+          "combined": "देवर्षि",
+          "word1_iast": "deva",
+          "word2_iast": "ṛṣi",
+          "combined_iast": "devarṣi",
+          "meaning": "divine sage (Devarshi)",
+          "boundary": "अ + ऋ → अर्"
+        },
+        {
+          "word1": "तव",
+          "word2": "ऌकार",
+          "combined": "तवल्कार",
+          "word1_iast": "tava",
+          "word2_iast": "ḷkāra",
+          "combined_iast": "tavalkāra",
+          "meaning": "thy letter ḷ",
+          "boundary": "अ + ऌ → अल्"
+        }
+      ],
+      "rule_name_hi": "गुण सन्धि (गुणसन्धिः)",
+      "rule_name_en": "Guṇa Sandhi (गुणसन्धिः)",
+      "category_hi": "स्वरसन्धिः (अच्-सन्धिः)",
+      "category_en": "Svara Sandhi (स्वरसन्धिः)",
+      "description_hi": "जब ह्रस्व या दीर्घ 'अ' (अ, आ) के बाद भिन्न सरल स्वर (इ/ई, उ/ऊ, ऋ/ॠ, ऌ) आए, तब दोनों मिलकर क्रमशः ए, ओ, अर्, अल् बन जाते हैं।",
+      "description_en": "When short or long a (a / ā) is followed by a dissimilar simple vowel (i/ī, u/ū, ṛ/ṝ, ḷ), both merge into the corresponding guṇa vowel (a, e, o; with r/l for ṛ/ḷ).",
+      "transformation_hi": "अ/आ + इ/ई → ए; अ/आ + उ/ऊ → ओ; अ/आ + ऋ/ॠ → अर्; अ/आ + ऌ → अल्",
+      "transformation_en": "a/ā + i/ī → e (ए); a/ā + u/ū → o (ओ); a/ā + ṛ/ṝ → ar (अर्); a/ā + ḷ → al (अल्)",
+      "explanation_hi": "पाणिनि सूत्र ६.१.८७ (आद्गुणः) तथा १.१.५१ (उरण् रपरः) के अनुसार अवर्ण के बाद 'इक्' स्वर आने पर गुण एकादेश होता है। अ/आ + इ/ई से 'ए', अ/आ + उ/ऊ से 'ओ', तथा ऋ के साथ 'अर्' की निष्पत्ति होती है।",
+      "explanation_en": "According to sūtra 6.1.87 (Ādguṇaḥ) and 1.1.51 (Uraṇ raparaḥ), when an 'avarna' (a or ā) precedes an 'ic' vowel, guṇa (a, e, o) is the single substitute. When ṛ is involved, 'ar' is produced."
+    },
+    {
+      "rule_id": "SVAR_03",
+      "rule_name": "Vṛddhi Sandhi (वृद्धिसन्धिः)",
+      "category": "Svara Sandhi (स्वरसन्धिः)",
+      "sutra": "वृद्धिरेचि",
+      "sutra_roman": "Vṛddhireci",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.88",
+      "pratyahara": "अ/आ + एच् (ec)",
+      "description": "When short or long a (a / ā) is followed by a diphthong (e, ai, o, au belonging to 'ec' pratyāhāra), both vowels merge into the corresponding vṛddhi vowel (ai, au).",
+      "transformation": "a/ā + e/ai → ai (ऐ); a/ā + o/au → au (औ)",
+      "conditions": {
+        "purva_ending": [
+          "अ",
+          "आ"
+        ],
+        "uttara_beginning": [
+          "ए",
+          "ऐ",
+          "ओ",
+          "औ"
+        ],
+        "condition_type": "a_followed_by_diphthong"
+      },
+      "explanation": "Under sūtra 6.1.88, if an 'avarna' precedes an 'ec' sound (e, o, ai, au), vṛddhi (ā, ai, au defined in 1.1.1 वृद्धिरादैच्) is the single substitute: e/ai yield ai, and o/au yield au.",
+      "examples": [
+        {
+          "word1": "सदा",
+          "word2": "एव",
+          "combined": "सदैव",
+          "word1_iast": "sadā",
+          "word2_iast": "eva",
+          "combined_iast": "sadaiva",
+          "meaning": "always / forever",
+          "boundary": "आ + ए → ऐ"
+        },
+        {
+          "word1": "एक",
+          "word2": "एक",
+          "combined": "एकैक",
+          "word1_iast": "eka",
+          "word2_iast": "eka",
+          "combined_iast": "ekaika",
+          "meaning": "one by one / each singly",
+          "boundary": "अ + ए → ऐ"
+        },
+        {
+          "word1": "मत",
+          "word2": "ऐक्य",
+          "combined": "मतैक्य",
+          "word1_iast": "mata",
+          "word2_iast": "aikya",
+          "combined_iast": "mataikya",
+          "meaning": "unanimity of opinion",
+          "boundary": "अ + ऐ → ऐ"
+        },
+        {
+          "word1": "महा",
+          "word2": "ऐश्वर्य",
+          "combined": "महैश्वर्य",
+          "word1_iast": "mahā",
+          "word2_iast": "aiśvarya",
+          "combined_iast": "mahaiśvarya",
+          "meaning": "great majesty / opulence",
+          "boundary": "आ + ऐ → ऐ"
+        },
+        {
+          "word1": "जल",
+          "word2": "ओघ",
+          "combined": "जलौघ",
+          "word1_iast": "jala",
+          "word2_iast": "ogha",
+          "combined_iast": "jalaugha",
+          "meaning": "torrent / stream of water",
+          "boundary": "अ + ओ → औ"
+        },
+        {
+          "word1": "महा",
+          "word2": "औषध",
+          "combined": "महौषध",
+          "word1_iast": "mahā",
+          "word2_iast": "auṣadha",
+          "combined_iast": "mahauṣadha",
+          "meaning": "great medicine / panacea",
+          "boundary": "आ + औ → औ"
+        }
+      ],
+      "rule_name_hi": "वृद्धि सन्धि (वृद्धिसन्धिः)",
+      "rule_name_en": "Vṛddhi Sandhi (वृद्धिसन्धिः)",
+      "category_hi": "स्वरसन्धिः (अच्-सन्धिः)",
+      "category_en": "Svara Sandhi (स्वरसन्धिः)",
+      "description_hi": "जब ह्रस्व या दीर्घ 'अ' (अ, आ) के बाद संयुक्त स्वर या सन्ध्यक्षर (ए, ऐ, ओ, औ) आएं, तो दोनों मिलकर क्रमशः 'ऐ' तथा 'औ' बन जाते हैं।",
+      "description_en": "When short or long a (a / ā) is followed by a diphthong (e, ai, o, au belonging to 'ec' pratyāhāra), both vowels merge into the corresponding vṛddhi vowel (ai, au).",
+      "transformation_hi": "अ/आ + ए/ऐ → ऐ; अ/आ + ओ/औ → औ",
+      "transformation_en": "a/ā + e/ai → ai (ऐ); a/ā + o/au → au (औ)",
+      "explanation_hi": "पाणिनि सूत्र ६.१.८८ (वृद्धिरेचि) के अनुसार अवर्ण से परे 'एच्' (ए, ओ, ऐ, औ) होने पर पूर्व और पर दोनों के स्थान में वृद्धि (ऐ, औ) एकादेश होता है।",
+      "explanation_en": "Under sūtra 6.1.88 (Vṛddhireci), if an 'avarna' precedes an 'ec' sound (e, o, ai, au), vṛddhi (ai, au) is the single substitute: e/ai yield ai, and o/au yield au."
+    },
+    {
+      "rule_id": "SVAR_04",
+      "rule_name": "Yaṇ Sandhi (यण्सन्धिः)",
+      "category": "Svara Sandhi (स्वरसन्धिः)",
+      "sutra": "इको यणचि",
+      "sutra_roman": "Iko yaṇaci",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.77",
+      "pratyahara": "इक् (ik) + अच् (ac - dissimilar)",
+      "description": "When an 'ik' vowel (i, ī, u, ū, ṛ, ṝ, ḷ) is followed by any dissimilar vowel ('ac'), the first vowel is replaced by its corresponding semivowel from the 'yaṇ' pratyāhāra (y, v, r, l).",
+      "transformation": "i/ī + vowel → y (य्) + vowel; u/ū + vowel → v (व्) + vowel; ṛ/ṝ + vowel → r (र्) + vowel; ḷ + vowel → l (ल्) + vowel",
+      "conditions": {
+        "purva_ending": [
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ"
+        ],
+        "uttara_beginning": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ",
+          "ए",
+          "ऐ",
+          "ओ",
+          "औ"
+        ],
+        "condition_type": "ik_followed_by_dissimilar_vowel"
+      },
+      "explanation": "According to sūtra 6.1.77, in place of 'ik' comes 'yaṇ' when an 'ac' (vowel) follows, provided they are not savarṇa (homogeneous), as savarṇa takes precedence under 6.1.101.",
+      "examples": [
+        {
+          "word1": "इति",
+          "word2": "आदि",
+          "combined": "इत्यादि",
+          "word1_iast": "iti",
+          "word2_iast": "ādi",
+          "combined_iast": "ityādi",
+          "meaning": "et cetera / and so on",
+          "boundary": "इ + आ → या"
+        },
+        {
+          "word1": "प्रति",
+          "word2": "एक",
+          "combined": "प्रत्येक",
+          "word1_iast": "prati",
+          "word2_iast": "eka",
+          "combined_iast": "pratyeka",
+          "meaning": "each and every one",
+          "boundary": "इ + ए → ये"
+        },
+        {
+          "word1": "यदि",
+          "word2": "अपि",
+          "combined": "यद्यपि",
+          "word1_iast": "yadi",
+          "word2_iast": "api",
+          "combined_iast": "yadyapi",
+          "meaning": "even if / although",
+          "boundary": "इ + अ → य"
+        },
+        {
+          "word1": "सु",
+          "word2": "आगतम्",
+          "combined": "स्वागतम्",
+          "word1_iast": "su",
+          "word2_iast": "āgatam",
+          "combined_iast": "svāgatam",
+          "meaning": "welcome",
+          "boundary": "उ + आ → वा"
+        },
+        {
+          "word1": "अनु",
+          "word2": "अय",
+          "combined": "अन्वय",
+          "word1_iast": "anu",
+          "word2_iast": "aya",
+          "combined_iast": "anvaya",
+          "meaning": "prose order / logical connection",
+          "boundary": "उ + अ → व"
+        },
+        {
+          "word1": "पितृ",
+          "word2": "आज्ञा",
+          "combined": "पित्राज्ञा",
+          "word1_iast": "pitṛ",
+          "word2_iast": "ājñā",
+          "combined_iast": "pitrājñā",
+          "meaning": "father's order",
+          "boundary": "ऋ + आ → रा"
+        },
+        {
+          "word1": "मातृ",
+          "word2": "उपदेश",
+          "combined": "मात्रुपदेश",
+          "word1_iast": "mātṛ",
+          "word2_iast": "upadeśa",
+          "combined_iast": "mātrupadeśa",
+          "meaning": "mother's counsel",
+          "boundary": "ऋ + उ → रु"
+        },
+        {
+          "word1": "ऌ",
+          "word2": "आकृति",
+          "combined": "लाकृति",
+          "word1_iast": "ḷ",
+          "word2_iast": "ākṛti",
+          "combined_iast": "lākṛti",
+          "meaning": "having the form of letter ḷ",
+          "boundary": "ऌ + आ → ला"
+        }
+      ],
+      "rule_name_hi": "यण् सन्धि (यण्सन्धिः)",
+      "rule_name_en": "Yaṇ Sandhi (यण्सन्धिः)",
+      "category_hi": "स्वरसन्धिः (अच्-सन्धिः)",
+      "category_en": "Svara Sandhi (स्वरसन्धिः)",
+      "description_hi": "जब 'इक्' प्रत्याहार (इ, ई, उ, ऊ, ऋ, ॠ, ऌ) के बाद कोई भिन्न स्वर (अच्) आता है, तो 'इक्' के स्थान पर क्रमशः 'यण्' (य्, व्, र्, ल्) आदेश होता है।",
+      "description_en": "When an 'ik' vowel (i, ī, u, ū, ṛ, ṝ, ḷ) is followed by any dissimilar vowel ('ac'), the first vowel is replaced by its corresponding semivowel from the 'yaṇ' pratyāhāra (y, v, r, l).",
+      "transformation_hi": "इ/ई + स्वर → य् + स्वर; उ/ऊ + स्वर → व् + स्वर; ऋ/ॠ + स्वर → र् + स्वर; ऌ + स्वर → ल् + स्वर",
+      "transformation_en": "i/ī + vowel → y (य्) + vowel; u/ū + vowel → v (व्) + vowel; ṛ/ṝ + vowel → r (र्) + vowel; ḷ + vowel → l (ल्) + vowel",
+      "explanation_hi": "सूत्र ६.१.७७ (इको यणचि) के अनुसार 'इक्' के स्थान पर 'यण्' आदेश होता है जब बाद में कोई भिन्न स्वर उपस्थित हो। इ/ई का 'य्', उ/ऊ का 'व्', ऋ/ॠ का 'र्' और ऌ का 'ल्' बन जाता है।",
+      "explanation_en": "According to sūtra 6.1.77 (Iko yaṇaci), in place of 'ik' comes 'yaṇ' when an 'ac' (vowel) follows, provided they are not savarṇa (homogeneous)."
+    },
+    {
+      "rule_id": "SVAR_05",
+      "rule_name": "Ayādi Sandhi (अयादिसन्धिः)",
+      "category": "Svara Sandhi (स्वरसन्धिः)",
+      "sutra": "एचोऽयवायावः",
+      "sutra_roman": "Eco'yavāyāvaḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.78",
+      "pratyahara": "एच् (ec) + अच् (ac)",
+      "description": "When a diphthong of the 'ec' pratyāhāra (e, o, ai, au) is followed by any vowel ('ac'), the sounds are replaced respectively by ay (अय्), av (अव्), āy (आय्), and āv (आव्).",
+      "transformation": "e + vowel → ay (अय्) + vowel; o + vowel → av (अव्) + vowel; ai + vowel → āy (आय्) + vowel; au + vowel → āv (आव्) + vowel",
+      "conditions": {
+        "purva_ending": [
+          "ए",
+          "ओ",
+          "ऐ",
+          "औ"
+        ],
+        "uttara_beginning": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ",
+          "ए",
+          "ऐ",
+          "ओ",
+          "औ"
+        ],
+        "condition_type": "ec_followed_by_vowel"
+      },
+      "explanation": "Sūtra 6.1.78 specifies that the four members of 'ec' (e, o, ai, au) correspond respectively to ay, av, āy, āv (यथासंख्यमनुदेशः समानाम् 1.3.10) before any vowel.",
+      "examples": [
+        {
+          "word1": "ने",
+          "word2": "अन",
+          "combined": "नयन",
+          "word1_iast": "ne",
+          "word2_iast": "ana",
+          "combined_iast": "nayana",
+          "meaning": "eye / leading",
+          "boundary": "ए + अ → अय"
+        },
+        {
+          "word1": "शे",
+          "word2": "अन",
+          "combined": "शयन",
+          "word1_iast": "śe",
+          "word2_iast": "ana",
+          "combined_iast": "śayana",
+          "meaning": "reclining / bed",
+          "boundary": "ए + अ → अय"
+        },
+        {
+          "word1": "पो",
+          "word2": "अन",
+          "combined": "पवन",
+          "word1_iast": "po",
+          "word2_iast": "ana",
+          "combined_iast": "pavana",
+          "meaning": "wind / air / purifier",
+          "boundary": "ओ + अ → अव"
+        },
+        {
+          "word1": "भो",
+          "word2": "अन",
+          "combined": "भवन",
+          "word1_iast": "bho",
+          "word2_iast": "ana",
+          "combined_iast": "bhavana",
+          "meaning": "mansion / becoming",
+          "boundary": "ओ + अ → अव"
+        },
+        {
+          "word1": "नै",
+          "word2": "अक",
+          "combined": "नायक",
+          "word1_iast": "nai",
+          "word2_iast": "aka",
+          "combined_iast": "nāyaka",
+          "meaning": "leader / protagonist",
+          "boundary": "ऐ + अ → आय"
+        },
+        {
+          "word1": "गै",
+          "word2": "अक",
+          "combined": "गायक",
+          "word1_iast": "gai",
+          "word2_iast": "aka",
+          "combined_iast": "gāyaka",
+          "meaning": "singer",
+          "boundary": "ऐ + अ → आय"
+        },
+        {
+          "word1": "पौ",
+          "word2": "अक",
+          "combined": "पावक",
+          "word1_iast": "pau",
+          "word2_iast": "aka",
+          "combined_iast": "pāvaka",
+          "meaning": "fire / sanctifier",
+          "boundary": "औ + अ → आव"
+        },
+        {
+          "word1": "नौ",
+          "word2": "इक",
+          "combined": "नाविक",
+          "word1_iast": "nau",
+          "word2_iast": "ika",
+          "combined_iast": "nāvika",
+          "meaning": "sailor / boatman",
+          "boundary": "औ + इ → आवि"
+        }
+      ],
+      "rule_name_hi": "अयादि सन्धि (अयादिसन्धिः)",
+      "rule_name_en": "Ayādi Sandhi (अयादिसन्धिः)",
+      "category_hi": "स्वरसन्धिः (अच्-सन्धिः)",
+      "category_en": "Svara Sandhi (स्वरसन्धिः)",
+      "description_hi": "जब 'एच्' प्रत्याहार (ए, ओ, ऐ, औ) के बाद कोई भी स्वर आता है, तो उनके स्थान पर क्रमशः अय्, अव्, आय्, आव् आदेश होता है।",
+      "description_en": "When a diphthong of the 'ec' pratyāhāra (e, o, ai, au) is followed by any vowel ('ac'), the sounds are replaced respectively by ay, av, āy, and āv.",
+      "transformation_hi": "ए + स्वर → अय् + स्वर; ओ + स्वर → अव् + स्वर; ऐ + स्वर → आय् + स्वर; औ + स्वर → आव् + स्वर",
+      "transformation_en": "e + vowel → ay (अय्) + vowel; o + vowel → av (अव्) + vowel; ai + vowel → āy (आय्) + vowel; au + vowel → āv (आव्) + vowel",
+      "explanation_hi": "सूत्र ६.१.७८ (एचोऽयवायावः) के अनुसार 'एच्' के चारों वर्णों (ए, ओ, ऐ, औ) के स्थान पर स्वर परे होने पर क्रमशः अय्, अव्, आय् तथा आव् आदेश होते हैं (यथासंख्यमनुदेशः समानाम् १.३.१०)।",
+      "explanation_en": "Sūtra 6.1.78 (Eco'yavāyāvaḥ) specifies that the four members of 'ec' (e, o, ai, au) correspond respectively to ay, av, āy, āv before any vowel."
+    },
+    {
+      "rule_id": "SVAR_06",
+      "rule_name": "Pūrvarūpa Sandhi (पूर्वरूपसन्धिः)",
+      "category": "Svara Sandhi (स्वरसन्धिः)",
+      "sutra": "एङः पदान्तादति",
+      "sutra_roman": "Eṅaḥ padāntādati",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.109",
+      "pratyahara": "एङ् (eṅ - padānta) + अत् (at - short a)",
+      "description": "When a word ends in 'e' or 'o' (eṅ pratyāhāra) and the following word begins with short 'a' (at), the short 'a' is absorbed into the preceding vowel, marked in writing with an avagraha (ऽ).",
+      "transformation": "e + a → e' (ेऽ); o + a → o' (ोऽ)",
+      "conditions": {
+        "purva_ending": [
+          "ए",
+          "ओ"
+        ],
+        "uttara_beginning": [
+          "अ"
+        ],
+        "condition_type": "padanta_en_followed_by_short_a"
+      },
+      "explanation": "This is an exception (apavāda) to Ayādi Sandhi (6.1.78). When 'e' or 'o' is at the end of a complete inflected word (padānta) and short 'a' follows, pūrvarūpa (the previous sound) alone remains.",
+      "examples": [
+        {
+          "word1": "ते",
+          "word2": "अपि",
+          "combined": "तेऽपि",
+          "word1_iast": "te",
+          "word2_iast": "api",
+          "combined_iast": "te'pi",
+          "meaning": "they also",
+          "boundary": "ए + अ → ेऽ"
+        },
+        {
+          "word1": "हरे",
+          "word2": "अव",
+          "combined": "हरेऽव",
+          "word1_iast": "hare",
+          "word2_iast": "ava",
+          "combined_iast": "hare'va",
+          "meaning": "O Hari, protect!",
+          "boundary": "ए + अ → ेऽ"
+        },
+        {
+          "word1": "प्रभो",
+          "word2": "अनुग्रह",
+          "combined": "प्रभोऽनुग्रह",
+          "word1_iast": "prabho",
+          "word2_iast": "anugraha",
+          "combined_iast": "prabho'nugraha",
+          "meaning": "Lord's grace",
+          "boundary": "ओ + अ → ोऽ"
+        },
+        {
+          "word1": "वृक्षे",
+          "word2": "अपि",
+          "combined": "वृक्षेऽपि",
+          "word1_iast": "vṛkṣe",
+          "word2_iast": "api",
+          "combined_iast": "vṛkṣe'pi",
+          "meaning": "in the tree also",
+          "boundary": "ए + अ → ेऽ"
+        },
+        {
+          "word1": "सो",
+          "word2": "अपि",
+          "combined": "सोऽपि",
+          "word1_iast": "so",
+          "word2_iast": "api",
+          "combined_iast": "so'pi",
+          "meaning": "he also",
+          "boundary": "ओ + अ → ोऽ"
+        }
+      ],
+      "rule_name_hi": "पूर्वरूप सन्धि (पूर्वरूपसन्धिः)",
+      "rule_name_en": "Pūrvarūpa Sandhi (पूर्वरूपसन्धिः)",
+      "category_hi": "स्वरसन्धिः (अच्-सन्धिः)",
+      "category_en": "Svara Sandhi (स्वरसन्धिः)",
+      "description_hi": "जब पद के अन्त में 'ए' या 'ओ' हो और उसके बाद ह्रस्व 'अ' आए, तो 'अ' पूर्व स्वर में विलीन हो जाता है और उसके स्थान पर अवग्रह (ऽ) लगाया जाता है।",
+      "description_en": "When a word ends in 'e' or 'o' (eṅ pratyāhāra) and the following word begins with short 'a' (at), the short 'a' is absorbed into the preceding vowel, marked with an avagraha (ऽ).",
+      "transformation_hi": "ए + अ → ेऽ; ओ + अ → ोऽ",
+      "transformation_en": "e + a → e' (ेऽ); o + a → o' (ोऽ)",
+      "explanation_hi": "सूत्र ६.१.१०९ (एङः पदान्तादति) अयादि सन्धि का अपवाद है। पदान्त ए अथवा ओ के बाद ह्रस्व अ आने पर केवल पूर्व रूप ही शेष रहता है और अ का लोप अवग्रह (ऽ) द्वारा दर्शाया जाता है।",
+      "explanation_en": "This is an exception (apavāda) to Ayādi Sandhi (6.1.78). When 'e' or 'o' is at the end of a complete inflected word (padānta) and short 'a' follows, pūrvarūpa alone remains."
+    },
+    {
+      "rule_id": "SVAR_07",
+      "rule_name": "Prakṛtibhāva Sandhi (प्रकृतिभावसन्धिः)",
+      "category": "Svara Sandhi (स्वरसन्धिः)",
+      "sutra": "ईदूदेद्द्विवचनं प्रगृह्यम् & प्लुतप्रगृह्या अचि नित्यम्",
+      "sutra_roman": "Īdūdeddvivacanaṁ pragṛhyam & Plutapragṛhyā aci nityam",
+      "reference": "Pāṇini Aṣṭādhyāyī 1.1.11 & 6.1.125",
+      "pratyahara": "प्रगृह्य (pragṛhya) + अच् (ac)",
+      "description": "Dual noun terminations ending in long ī (ई), long ū (ऊ), or e (ए) are designated 'pragṛhya'. Before any following vowel, they undergo no Sandhi alteration (remain in natural original form).",
+      "transformation": "ī/ū/e (dual) + vowel → unchanged (space separated)",
+      "conditions": {
+        "purva_ending": [
+          "ई",
+          "ऊ",
+          "ए"
+        ],
+        "uttara_beginning": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ",
+          "ए",
+          "ऐ",
+          "ओ",
+          "औ"
+        ],
+        "condition_type": "pragrhya_vowels"
+      },
+      "explanation": "Sūtras 1.1.11 and 6.1.125 ordain that pragṛhya vowels do not fuse with a succeeding vowel; the hiatus is naturally preserved without sound merger.",
+      "examples": [
+        {
+          "word1": "हरी",
+          "word2": "एतौ",
+          "combined": "हरी एतौ",
+          "word1_iast": "harī",
+          "word2_iast": "etau",
+          "combined_iast": "harī etau",
+          "meaning": "these two Haris",
+          "boundary": "ई + ए → ई ए (unchanged)"
+        },
+        {
+          "word1": "विष्णू",
+          "word2": "इमौ",
+          "combined": "विष्णू इमौ",
+          "word1_iast": "viṣṇū",
+          "word2_iast": "imau",
+          "combined_iast": "viṣṇū imau",
+          "meaning": "these two Vishnus",
+          "boundary": "ऊ + इ → ऊ इ (unchanged)"
+        },
+        {
+          "word1": "गङ्गे",
+          "word2": "अमू",
+          "combined": "गङ्गे अमू",
+          "word1_iast": "gaṅge",
+          "word2_iast": "amū",
+          "combined_iast": "gaṅge amū",
+          "meaning": "those two Ganges",
+          "boundary": "ए + अ → ए अ (unchanged)"
+        }
+      ],
+      "rule_name_hi": "प्रकृतिभाव सन्धि (प्रकृतिभावसन्धिः)",
+      "rule_name_en": "Prakṛtibhāva Sandhi (प्रकृतिभावसन्धिः)",
+      "category_hi": "स्वरसन्धिः (अच्-सन्धिः)",
+      "category_en": "Svara Sandhi (स्वरसन्धिः)",
+      "description_hi": "द्विवचन के अन्त में आने वाले दीर्घ ई, ऊ और ए को प्रगृह्य कहते हैं। प्रगृह्य स्वरों के आगे स्वर आने पर कोई सन्धि-परिवर्तन नहीं होता (मूल रूप बना रहता है)।",
+      "description_en": "Dual noun terminations ending in long ī, long ū, or e are designated 'pragṛhya'. Before any following vowel, they undergo no Sandhi alteration.",
+      "transformation_hi": "ई/ऊ/ए (द्विवचन) + स्वर → अपरिवर्तित (प्रकृतिभावः)",
+      "transformation_en": "ī/ū/e (dual) + vowel → unchanged (space separated)",
+      "explanation_hi": "सूत्र १.१.११ (ईदूदेद्द्विवचनं प्रगृह्यम्) तथा ६.१.१२५ (प्लुतप्रगृह्या अचि नित्यम्) के अनुसार प्रगृह्य संज्ञक वर्णों के आगे अच् (स्वर) आने पर नित्य प्रकृतिभाव रहता है, अर्थात् कोई सन्धि नहीं होती।",
+      "explanation_en": "Sūtras 1.1.11 and 6.1.125 ordain that pragṛhya vowels do not fuse with a succeeding vowel; the hiatus is naturally preserved without sound merger."
+    },
+    {
+      "rule_id": "VYAN_01",
+      "rule_name": "Ścutva Sandhi (श्चुत्वसन्धिः)",
+      "category": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "sutra": "स्तोः श्चुना श्चुः",
+      "sutra_roman": "Stoḥ ścunā ścuḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.4.40",
+      "pratyahara": "स्तु (stu: s, t-varga) + श्चु (ścu: ś, c-varga)",
+      "description": "When dental sibilant 's' (स्) or dental stops (t, th, d, dh, n) come in contact with palatal sibilant 'ś' (श्) or palatal stops (c, ch, j, jh, ñ), the dentals change into the corresponding palatals.",
+      "transformation": "s → ś (श्); t → c (च्); th → ch (छ्); d → j (ज्); dh → jh (झ्); n → ñ (ञ्)",
+      "conditions": {
+        "purva_ending": [
+          "स्",
+          "त्",
+          "थ्",
+          "द्",
+          "ध्",
+          "न्"
+        ],
+        "uttara_beginning": [
+          "श",
+          "च",
+          "छ",
+          "ज",
+          "झ",
+          "ञ"
+        ],
+        "condition_type": "dental_meets_palatal"
+      },
+      "explanation": "Sūtra 8.4.40 governs dental to palatal assimilation in Sanskrit phonology. The dental consonant adopts the palatal place of articulation of the neighboring sound.",
+      "examples": [
+        {
+          "word1": "सत्",
+          "word2": "चित्",
+          "combined": "सच्चित्",
+          "word1_iast": "sat",
+          "word2_iast": "cit",
+          "combined_iast": "saccit",
+          "meaning": "truth and consciousness",
+          "boundary": "त् + च → च्च"
+        },
+        {
+          "word1": "सत्",
+          "word2": "जन",
+          "combined": "सज्जन",
+          "word1_iast": "sat",
+          "word2_iast": "jana",
+          "combined_iast": "sajjana",
+          "meaning": "virtuous person / gentleman",
+          "boundary": "त् + ज → ज्ज"
+        },
+        {
+          "word1": "रामस्",
+          "word2": "शेते",
+          "combined": "रामश्शेते",
+          "word1_iast": "rāmas",
+          "word2_iast": "śete",
+          "combined_iast": "rāmaśśete",
+          "meaning": "Rama sleeps",
+          "boundary": "स् + श → श्श"
+        },
+        {
+          "word1": "उत्",
+          "word2": "ज्वल",
+          "combined": "उज्ज्वल",
+          "word1_iast": "ut",
+          "word2_iast": "jvala",
+          "combined_iast": "ujjvala",
+          "meaning": "radiant / ablaze",
+          "boundary": "त् + ज → ज्ज"
+        },
+        {
+          "word1": "तत्",
+          "word2": "च",
+          "combined": "तच्च",
+          "word1_iast": "tat",
+          "word2_iast": "ca",
+          "combined_iast": "tacca",
+          "meaning": "and that",
+          "boundary": "त् + च → च्च"
+        }
+      ],
+      "rule_name_hi": "श्चुत्व सन्धि (श्चुत्वसन्धिः)",
+      "rule_name_en": "Ścutva Sandhi (श्चुत्वसन्धिः)",
+      "category_hi": "व्यञ्जनसन्धिः (हल्-सन्धिः)",
+      "category_en": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "description_hi": "जब दन्त्य 'स्' या त-वर्ग (त्, थ्, द्, ध्, न्) का तालव्य 'श्' या च-वर्ग (च्, छ्, ज्, झ्, ञ्) के साथ योग होता है, तब दन्त्य वर्ण तालव्य वर्णों में बदल जाते हैं।",
+      "description_en": "When dental sibilant 's' or dental stops (t, th, d, dh, n) come in contact with palatal sibilant 'ś' or palatal stops (c, ch, j, jh, ñ), the dentals change into the corresponding palatals.",
+      "transformation_hi": "स् → श्; त् → च्/ज्; थ् → छ्; द् → ज्; ध् → झ्; न् → ञ्",
+      "transformation_en": "s → ś (श्); t → c/j (च्/ज्); th → ch (छ्); d → j (ज्); dh → jh (झ्); n → ñ (ञ्)",
+      "explanation_hi": "सूत्र ८.४.४० (स्तोः श्चुना श्चुः) के अनुसार दन्त्य वर्णों का तालव्य वर्णों के साथ सम्पर्क होने पर दन्त्य वर्ण अपने निकटवर्ती तालव्य वर्ण का स्थान ग्रहण कर लेते हैं।",
+      "explanation_en": "Sūtra 8.4.40 governs dental to palatal assimilation in Sanskrit phonology. The dental consonant adopts the palatal place of articulation of the neighboring sound."
+    },
+    {
+      "rule_id": "VYAN_02",
+      "rule_name": "Ṣṭutva Sandhi (ष्टुत्वसन्धिः)",
+      "category": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "sutra": "ष्टुना ष्टुः",
+      "sutra_roman": "Ṣṭunā ṣṭuḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.4.41",
+      "pratyahara": "स्तु (stu: s, t-varga) + ष्टु (ṣṭu: ṣ, ṭ-varga)",
+      "description": "When dental sibilant 's' (स्) or dental stops (t, th, d, dh, n) come in contact with retroflex sibilant 'ṣ' (ष्) or retroflex stops (ṭ, ṭh, ḍ, ḍh, ṇ), the dentals change into corresponding retroflexes.",
+      "transformation": "s → ṣ (ष्); t → ṭ (ट्); th → ṭh (ठ्); d → ḍ (ड्); dh → ḍh (ढ्); n → ṇ (ण्)",
+      "conditions": {
+        "purva_ending": [
+          "स्",
+          "त्",
+          "थ्",
+          "द्",
+          "ध्",
+          "न्"
+        ],
+        "uttara_beginning": [
+          "ष",
+          "ट",
+          "ठ",
+          "ड",
+          "ढ",
+          "ण"
+        ],
+        "condition_type": "dental_meets_retroflex"
+      },
+      "explanation": "Sūtra 8.4.41 establishes retroflex assimilation. Dental consonants assimilate their articulation point to the retroflex series (mūrdhanya).",
+      "examples": [
+        {
+          "word1": "रामस्",
+          "word2": "टीकते",
+          "combined": "रामष्टीकते",
+          "word1_iast": "rāmas",
+          "word2_iast": "ṭīkate",
+          "combined_iast": "rāmaṣṭīkate",
+          "meaning": "Rama roams",
+          "boundary": "स् + ट → ष्ट"
+        },
+        {
+          "word1": "तत्",
+          "word2": "टीका",
+          "combined": "तट्टीका",
+          "word1_iast": "tat",
+          "word2_iast": "ṭīkā",
+          "combined_iast": "taṭṭīkā",
+          "meaning": "commentary on that",
+          "boundary": "त् + ट → ट्ट"
+        },
+        {
+          "word1": "धनुस्",
+          "word2": "टङ्कार",
+          "combined": "धनुष्टङ्कार",
+          "word1_iast": "dhanus",
+          "word2_iast": "ṭaṅkāra",
+          "combined_iast": "dhanuṣṭaṅkāra",
+          "meaning": "twang of the bow",
+          "boundary": "स् + ट → ष्ट"
+        }
+      ],
+      "rule_name_hi": "ष्टुत्व सन्धि (ष्टुत्वसन्धिः)",
+      "rule_name_en": "Ṣṭutva Sandhi (ष्टुत्वसन्धिः)",
+      "category_hi": "व्यञ्जनसन्धिः (हल्-सन्धिः)",
+      "category_en": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "description_hi": "जब दन्त्य 'स्' या त-वर्ग (त्, थ्, द्, ध्, न्) का मूर्धन्य 'ष्' या ट-वर्ग (ट्, ठ्, ड्, ढ्, ण्) के साथ योग होता है, तब दन्त्य वर्ण मूर्धन्य वर्णों में बदल जाते हैं।",
+      "description_en": "When dental sibilant 's' or dental stops come in contact with retroflex sibilant 'ṣ' or retroflex stops, the dentals change into corresponding retroflexes.",
+      "transformation_hi": "स् → ष्; त् → ट्; थ् → ठ्; द् → ड्; ध् → ढ्; न् → ण्",
+      "transformation_en": "s → ṣ (ष्); t → ṭ (ट्); th → ṭh (ठ्); d → ḍ (ड्); dh → ḍh (ढ्); n → ṇ (ण्)",
+      "explanation_hi": "सूत्र ८.४.४१ (ष्टुना ष्टुः) के अनुसार मूर्धन्य वर्णों के सान्निध्य में आने पर दन्त्य वर्णों का मूर्धन्यीकरण (मूर्धन्य वर्ण में परिवर्तन) हो जाता है।",
+      "explanation_en": "Sūtra 8.4.41 establishes retroflex assimilation. Dental consonants assimilate their articulation point to the retroflex series (mūrdhanya)."
+    },
+    {
+      "rule_id": "VYAN_03",
+      "rule_name": "Jaśtva Sandhi (जश्त्वसन्धिः - पदान्त)",
+      "category": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "sutra": "झलां जशोऽन्ते",
+      "sutra_roman": "Jhalāṁ jaśo'nte",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.2.39",
+      "pratyahara": "झल् (jhal) → जश् (jaś)",
+      "description": "A non-nasal stop at the end of a word ('jhal') before vowels or voiced consonants changes into the 3rd consonant of its respective class ('jaś': g, j, ḍ, d, b).",
+      "transformation": "k → g (ग्); c → j (ज्); ṭ → ḍ (ड्); t → d (द्); p → b (ब्)",
+      "conditions": {
+        "purva_ending": [
+          "क्",
+          "च्",
+          "ट्",
+          "त्",
+          "प्"
+        ],
+        "uttara_beginning": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ",
+          "ए",
+          "ऐ",
+          "ओ",
+          "औ",
+          "ग",
+          "घ",
+          "ज",
+          "झ",
+          "ड",
+          "ढ",
+          "द",
+          "ध",
+          "ब",
+          "भ",
+          "य",
+          "र",
+          "ल",
+          "व",
+          "ह"
+        ],
+        "condition_type": "word_final_stop_before_voiced"
+      },
+      "explanation": "Sūtra 8.2.39 converts any stop consonant at the end of a pada into its corresponding unaspirated voiced stop (the third letter of the varga: g, j, ḍ, d, b) before vowels and voiced consonants.",
+      "examples": [
+        {
+          "word1": "वाक्",
+          "word2": "ईश",
+          "combined": "वागीश",
+          "word1_iast": "vāk",
+          "word2_iast": "īśa",
+          "combined_iast": "vāgīśa",
+          "meaning": "master of speech / Brihaspati",
+          "boundary": "क् + ई → गी"
+        },
+        {
+          "word1": "जगत्",
+          "word2": "ईश",
+          "combined": "जगदीश",
+          "word1_iast": "jagat",
+          "word2_iast": "īśa",
+          "combined_iast": "jagadīśa",
+          "meaning": "lord of the universe",
+          "boundary": "त् + ई → दी"
+        },
+        {
+          "word1": "दिक्",
+          "word2": "गज",
+          "combined": "दिग्गज",
+          "word1_iast": "dik",
+          "word2_iast": "gaja",
+          "combined_iast": "diggaja",
+          "meaning": "guardian elephant of the quarters",
+          "boundary": "क् + ग → ग्ग"
+        },
+        {
+          "word1": "अच्",
+          "word2": "अन्तः",
+          "combined": "अजन्तः",
+          "word1_iast": "ac",
+          "word2_iast": "antaḥ",
+          "combined_iast": "ajantaḥ",
+          "meaning": "ending in a vowel",
+          "boundary": "च् + अ → ज"
+        },
+        {
+          "word1": "सत्",
+          "word2": "धर्म",
+          "combined": "सद्धर्म",
+          "word1_iast": "sat",
+          "word2_iast": "dharma",
+          "combined_iast": "saddharma",
+          "meaning": "true doctrine / noble virtue",
+          "boundary": "त् + ध → द्ध"
+        },
+        {
+          "word1": "अप्",
+          "word2": "ज",
+          "combined": "अब्ज",
+          "word1_iast": "ap",
+          "word2_iast": "ja",
+          "combined_iast": "abja",
+          "meaning": "born in water (lotus)",
+          "boundary": "प् + ज → ब्ज"
+        }
+      ],
+      "rule_name_hi": "जश्त्व सन्धि (जश्त्वसन्धिः - पदान्त)",
+      "rule_name_en": "Jaśtva Sandhi (जश्त्वसन्धिः - पदान्त)",
+      "category_hi": "व्यञ्जनसन्धिः (हल्-सन्धिः)",
+      "category_en": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "description_hi": "पदान्त स्पर्श वर्णों (क्, च्, ट्, त्, प्) के बाद कोई स्वर अथवा घोष व्यञ्जन आए, तो वह वर्ण अपने ही वर्ग के तीसरे वर्ण ('जश्': ग्, ज्, ड्, द्, ब्) में बदल जाता है।",
+      "description_en": "A non-nasal stop at the end of a word before vowels or voiced consonants changes into the 3rd consonant of its respective class ('jaś': g, j, ḍ, d, b).",
+      "transformation_hi": "क् → ग्; च् → ज्; ट् → ड्; त् → द्; प् → ब्",
+      "transformation_en": "k → g (ग्); c → j (ज्); ṭ → ḍ (ड्); t → d (द्); p → b (ब्)",
+      "explanation_hi": "सूत्र ८.२.३९ (झलां जशोऽन्ते) के अनुसार पदान्त 'झल्' वर्णों के स्थान पर घोषीकरण के प्रभाव से 'जश्' वर्ण (वर्ग का तृतीय अल्पप्राण घोष वर्ण) आदेश होता है।",
+      "explanation_en": "Sūtra 8.2.39 converts any stop consonant at the end of a pada into its corresponding unaspirated voiced stop (third letter: g, j, ḍ, d, b) before vowels and voiced consonants."
+    },
+    {
+      "rule_id": "VYAN_04",
+      "rule_name": "Cartva Sandhi (चर्त्वसन्धिः)",
+      "category": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "sutra": "खरि च",
+      "sutra_roman": "Khari ca",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.4.55",
+      "pratyahara": "झल् (jhal) → चर् (car) before खर् (khar)",
+      "description": "A voiced stop before a voiceless consonant (khar pratyāhāra) becomes unvoiced, changing into the 1st consonant of its class ('car': k, c, ṭ, t, p).",
+      "transformation": "g → k (क्); j → c (च्); ḍ → ṭ (ट्); d → t (त्); b → p (प्)",
+      "conditions": {
+        "purva_ending": [
+          "द्",
+          "ग्",
+          "ब्",
+          "ड्"
+        ],
+        "uttara_beginning": [
+          "क",
+          "ख",
+          "च",
+          "छ",
+          "ट",
+          "ठ",
+          "त",
+          "थ",
+          "प",
+          "फ",
+          "श",
+          "ष",
+          "स"
+        ],
+        "condition_type": "voiced_stop_before_voiceless"
+      },
+      "explanation": "Sūtra 8.4.55 governs devocalization. When a voiced stop meets a voiceless consonant, regressive voicing assimilation converts the voiced stop into its corresponding voiceless counterpart.",
+      "examples": [
+        {
+          "word1": "सद्",
+          "word2": "कार",
+          "combined": "सत्कार",
+          "word1_iast": "sad",
+          "word2_iast": "kāra",
+          "combined_iast": "satkāra",
+          "meaning": "hospitality / good deed",
+          "boundary": "द् + क → त्क"
+        },
+        {
+          "word1": "उद्",
+          "word2": "पन्न",
+          "combined": "उत्पन्न",
+          "word1_iast": "ud",
+          "word2_iast": "panna",
+          "combined_iast": "utpanna",
+          "meaning": "arisen / produced",
+          "boundary": "द् + प → त्प"
+        },
+        {
+          "word1": "तद्",
+          "word2": "पर",
+          "combined": "तत्पर",
+          "word1_iast": "tad",
+          "word2_iast": "para",
+          "combined_iast": "tatpara",
+          "meaning": "devoted to that / engrossed",
+          "boundary": "द् + प → त्प"
+        }
+      ],
+      "rule_name_hi": "चर्त्व सन्धि (चर्त्वसन्धिः)",
+      "rule_name_en": "Cartva Sandhi (चर्त्वसन्धिः)",
+      "category_hi": "व्यञ्जनसन्धिः (हल्-सन्धिः)",
+      "category_en": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "description_hi": "घोष स्पर्श वर्णों (ग्, ज्, ड्, द्, ब्) के बाद कोई अघोष व्यञ्जन ('खर्') आए, तो घोष वर्ण अपने ही वर्ग के प्रथम अघोष वर्ण ('चर्': क्, च्, ट्, त्, प्) में परिवर्तित हो जाता है।",
+      "description_en": "A voiced stop before a voiceless consonant (khar pratyāhāra) becomes unvoiced, changing into the 1st consonant of its class ('car': k, c, ṭ, t, p).",
+      "transformation_hi": "ग् → क्; ज् → च्; ड् → ट्; द् → त्; ब् → प्",
+      "transformation_en": "g → k (क्); j → c (च्); ḍ → ṭ (ट्); d → t (त्); b → p (प्)",
+      "explanation_hi": "सूत्र ८.४.५५ (खरि च) अघोषीकरण का नियम है। अघोष वर्ण सामने होने पर पूर्ववर्ती घोष वर्ण भी अघोष रूप धारण कर लेता है।",
+      "explanation_en": "Sūtra 8.4.55 governs devocalization. When a voiced stop meets a voiceless consonant, regressive assimilation converts it into its voiceless counterpart."
+    },
+    {
+      "rule_id": "VYAN_05",
+      "rule_name": "Anunāsika Sandhi (अनुनासिकसन्धिः)",
+      "category": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "sutra": "यरोऽनुनासिकेऽनुनासिको वा",
+      "sutra_roman": "Yaro'nunāsike'nunāsiko vā",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.4.45",
+      "pratyahara": "यर् (yar) → अनुनासिक (nasal) before nasal",
+      "description": "Word-final stop consonants ('yar') before a nasal consonant (m, n) optionally or obligatorily transform into the nasal consonant of their own class (ṅ, ñ, ṇ, n, m).",
+      "transformation": "k → ṅ (ङ्); ṭ → ṇ (ण्); t → n (न्); p → m (म्)",
+      "conditions": {
+        "purva_ending": [
+          "क्",
+          "ट्",
+          "त्",
+          "प्"
+        ],
+        "uttara_beginning": [
+          "म",
+          "न"
+        ],
+        "condition_type": "stop_before_nasal"
+      },
+      "explanation": "Sūtra 8.4.45 states that a stop at the end of a pada assimilates to the corresponding nasal of its class when followed by a nasal consonant. In compound words and suffixation, this is standard classical usage.",
+      "examples": [
+        {
+          "word1": "वाक्",
+          "word2": "मयम्",
+          "combined": "वाङ्मयम्",
+          "word1_iast": "vāk",
+          "word2_iast": "mayam",
+          "combined_iast": "vāṅmayam",
+          "meaning": "literature / speech-form",
+          "boundary": "क् + म → ङ्म"
+        },
+        {
+          "word1": "जगत्",
+          "word2": "नाथ",
+          "combined": "जगन्नाथ",
+          "word1_iast": "jagat",
+          "word2_iast": "nātha",
+          "combined_iast": "jagannātha",
+          "meaning": "lord of the universe (Jagannath)",
+          "boundary": "त् + न → न्न"
+        },
+        {
+          "word1": "षट्",
+          "word2": "मुख",
+          "combined": "षण्मुख",
+          "word1_iast": "ṣaṭ",
+          "word2_iast": "mukha",
+          "combined_iast": "ṣaṇmukha",
+          "meaning": "six-faced (Kartikeya)",
+          "boundary": "ट् + म → ण्म"
+        },
+        {
+          "word1": "उत्",
+          "word2": "नति",
+          "combined": "उन्नति",
+          "word1_iast": "ut",
+          "word2_iast": "nati",
+          "combined_iast": "unnati",
+          "meaning": "uplift / progress",
+          "boundary": "त् + न → न्न"
+        }
+      ],
+      "rule_name_hi": "अनुनासिक सन्धि (अनुनासिकसन्धिः)",
+      "rule_name_en": "Anunāsika Sandhi (अनुनासिकसन्धिः)",
+      "category_hi": "व्यञ्जनसन्धिः (हल्-सन्धिः)",
+      "category_en": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "description_hi": "पदान्त स्पर्श वर्णों (क्, ट्, त्, प्) के बाद कोई अनुनासिक वर्ण (म्, न्) आए, तो स्पर्श वर्ण अपने ही वर्ग के पञ्चम (अनुनासिक) वर्ण (ङ्, ण्, न्, म्) में बदल जाता है।",
+      "description_en": "Word-final stop consonants before a nasal consonant (m, n) transform into the nasal consonant of their own class (ṅ, ñ, ṇ, n, m).",
+      "transformation_hi": "क् → ङ्; ट् → ण्; त् → न्; प् → म्",
+      "transformation_en": "k → ṅ (ङ्); ṭ → ṇ (ण्); t → n (न्); p → m (म्)",
+      "explanation_hi": "सूत्र ८.४.४५ (यरोऽनुनासिकेऽनुनासिको वा) के अनुसार पदान्त 'यर्' वर्णों के आगे अनुनासिक होने पर अपने वर्ग का अनुनासिक वर्ण आदेश होता है।",
+      "explanation_en": "Sūtra 8.4.45 states that a stop at the end of a pada assimilates to the corresponding nasal of its class when followed by a nasal consonant."
+    },
+    {
+      "rule_id": "VYAN_06",
+      "rule_name": "Anusvāra Sandhi (अनुस्वारसन्धिः)",
+      "category": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "sutra": "मोऽनुस्वारः",
+      "sutra_roman": "Mo'nusvāraḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.3.23",
+      "pratyahara": "म् (m padānta) + हल् (hal)",
+      "description": "Word-final 'm' (म्) before any consonant ('hal') transforms into an anusvāra (ं) positioned on the preceding vowel.",
+      "transformation": "m (म्) + consonant → ṁ (ं) + consonant",
+      "conditions": {
+        "purva_ending": [
+          "म्"
+        ],
+        "uttara_beginning": [
+          "क",
+          "ख",
+          "ग",
+          "घ",
+          "ङ",
+          "च",
+          "छ",
+          "ज",
+          "झ",
+          "ञ",
+          "ट",
+          "ठ",
+          "ड",
+          "ढ",
+          "ण",
+          "त",
+          "थ",
+          "द",
+          "ध",
+          "न",
+          "प",
+          "फ",
+          "ब",
+          "भ",
+          "म",
+          "य",
+          "र",
+          "ल",
+          "व",
+          "श",
+          "ष",
+          "स",
+          "ह"
+        ],
+        "condition_type": "padanta_m_before_consonant"
+      },
+      "explanation": "Sūtra 8.3.23 dictates that padānta 'm' becomes anusvāra whenever followed by a consonant (hal). Before vowels, 'm' remains as halanta consonant.",
+      "examples": [
+        {
+          "word1": "हरिम्",
+          "word2": "वन्दे",
+          "combined": "हरिं वन्दे",
+          "word1_iast": "harim",
+          "word2_iast": "vande",
+          "combined_iast": "hariṁ vande",
+          "meaning": "I worship Lord Hari",
+          "boundary": "म् + व → ं व"
+        },
+        {
+          "word1": "सत्यम्",
+          "word2": "वद",
+          "combined": "सत्यं वद",
+          "word1_iast": "satyam",
+          "word2_iast": "vada",
+          "combined_iast": "satyaṁ vada",
+          "meaning": "speak the truth",
+          "boundary": "म् + व → ं व"
+        },
+        {
+          "word1": "गृहम्",
+          "word2": "गच्छति",
+          "combined": "गृहं गच्छति",
+          "word1_iast": "gṛham",
+          "word2_iast": "gacchati",
+          "combined_iast": "gṛhaṁ gacchati",
+          "meaning": "goes home",
+          "boundary": "म् + ग → ं ग"
+        }
+      ],
+      "rule_name_hi": "अनुस्वार सन्धि (अनुस्वारसन्धिः)",
+      "rule_name_en": "Anusvāra Sandhi (अनुस्वारसन्धिः)",
+      "category_hi": "व्यञ्जनसन्धिः (हल्-सन्धिः)",
+      "category_en": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "description_hi": "किसी पद के अन्त में स्थित 'म्' के बाद यदि कोई व्यञ्जन (हल्) आए, तो 'म्' अनुस्वार (ं) में बदल जाता है।",
+      "description_en": "Word-final 'm' before any consonant ('hal') transforms into an anusvāra (ं) positioned on the preceding vowel.",
+      "transformation_hi": "म् + व्यञ्जन → ं + व्यञ्जन",
+      "transformation_en": "m (म्) + consonant → ṁ (ं) + consonant",
+      "explanation_hi": "सूत्र ८.३.२३ (मोऽनुस्वारः) के अनुसार पदान्त मकार के आगे कोई भी व्यञ्जन आने पर मकार का अनुस्वार हो जाता है। स्वर आने पर मकार हलन्त ही रहता है।",
+      "explanation_en": "Sūtra 8.3.23 dictates that padānta 'm' becomes anusvāra whenever followed by a consonant (hal). Before vowels, 'm' remains as halanta consonant."
+    },
+    {
+      "rule_id": "VYAN_07",
+      "rule_name": "Torli Parasavarṇa Sandhi (तोर्लि परसवर्णसन्धिः)",
+      "category": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "sutra": "तोर्लि",
+      "sutra_roman": "Torli",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.4.60",
+      "pratyahara": "तु (tu: t, th, d, dh, n) + ल् (l)",
+      "description": "Dental stops (t, th, d, dh) before 'l' (ल) assimilate completely into 'l' (ल्).",
+      "transformation": "t/th/d/dh + l → ll (ल्ल)",
+      "conditions": {
+        "purva_ending": [
+          "त्",
+          "थ्",
+          "द्",
+          "ध्"
+        ],
+        "uttara_beginning": [
+          "ल"
+        ],
+        "condition_type": "dental_stop_before_l"
+      },
+      "explanation": "Sūtra 8.4.60 prescribes that the sounds of the dental series ('tu') assimilate to lateral 'l' when followed by 'l'.",
+      "examples": [
+        {
+          "word1": "तत्",
+          "word2": "लय",
+          "combined": "तल्लय",
+          "word1_iast": "tat",
+          "word2_iast": "laya",
+          "combined_iast": "tallaya",
+          "meaning": "absorption into that",
+          "boundary": "त् + ल → ल्ल"
+        },
+        {
+          "word1": "उत्",
+          "word2": "लेख",
+          "combined": "उल्लेख",
+          "word1_iast": "ut",
+          "word2_iast": "lekha",
+          "combined_iast": "ullekha",
+          "meaning": "mention / reference",
+          "boundary": "त् + ल → ल्ल"
+        },
+        {
+          "word1": "उत्",
+          "word2": "लास",
+          "combined": "उल्लास",
+          "word1_iast": "ut",
+          "word2_iast": "lāsa",
+          "combined_iast": "ullāsa",
+          "meaning": "exuberant joy",
+          "boundary": "त् + ल → ल्ल"
+        }
+      ],
+      "rule_name_hi": "तोर्लि परसवर्ण सन्धि (तोर्लिसन्धिः)",
+      "rule_name_en": "Torli Parasavarṇa Sandhi (तोर्लि परसवर्णसन्धिः)",
+      "category_hi": "व्यञ्जनसन्धिः (हल्-सन्धिः)",
+      "category_en": "Vyañjana Sandhi (व्यञ्जनसन्धिः)",
+      "description_hi": "त-वर्ग के स्पर्श वर्णों (त्, थ्, द्, ध्) के बाद 'ल्' आने पर वे वर्ण 'ल्' में बदल जाते हैं तथा द्वित्व 'ल्ल' बनाते हैं।",
+      "description_en": "Dental stops (t, th, d, dh) before 'l' (ल) assimilate completely into 'l' (ल्).",
+      "transformation_hi": "त्/थ्/द्/ध् + ल → ल्ल",
+      "transformation_en": "t/th/d/dh + l → ll (ल्ल)",
+      "explanation_hi": "सूत्र ८.४.६० (तोर्लि) के अनुसार त-वर्ग ('तु') के वर्णों के बाद लकार ('ल') आने पर परसवर्ण आदेश अर्थात् 'ल्' हो जाता है।",
+      "explanation_en": "Sūtra 8.4.60 prescribes that the sounds of the dental series ('tu') assimilate to lateral 'l' when followed by 'l'."
+    },
+    {
+      "rule_id": "VIS_01",
+      "rule_name": "Utva Sandhi before Short A (उत्वसन्धिः - अतो रोरप्लुतादप्लुते)",
+      "category": "Visarga Sandhi (विसर्गसन्धिः)",
+      "sutra": "अतो रोरप्लुतादप्लुते",
+      "sutra_roman": "Ato roraplutādaplutep",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.113",
+      "pratyahara": "अतः रुः + अप्लुते अति",
+      "description": "When a visarga derived from 'ru' is preceded by short 'a' and followed by short 'a', it transforms into 'u', which then fuses with the preceding 'a' into 'o' (via Guṇa 6.1.87), and the following 'a' becomes avagraha ऽ (via Pūrvarūpa 6.1.109).",
+      "transformation": "aḥ (अः) + a (अ) → o' (ोऽ)",
+      "conditions": {
+        "purva_ending": [
+          "अः"
+        ],
+        "uttara_beginning": [
+          "अ"
+        ],
+        "condition_type": "ah_before_short_a"
+      },
+      "explanation": "Sūtra 6.1.113 replaces 'ru' with 'u' between short unprotracted 'a' sounds. The resulting sequence a + u creates 'o' via Guṇa Sandhi, and o + a creates o' via Pūrvarūpa Sandhi.",
+      "examples": [
+        {
+          "word1": "रामः",
+          "word2": "अवदत्",
+          "combined": "रामोऽवदत्",
+          "word1_iast": "rāmaḥ",
+          "word2_iast": "avadat",
+          "combined_iast": "rāmo'vadat",
+          "meaning": "Rama spoke",
+          "boundary": "अः + अ → ोऽ"
+        },
+        {
+          "word1": "कः",
+          "word2": "अपि",
+          "combined": "कोऽपि",
+          "word1_iast": "kaḥ",
+          "word2_iast": "api",
+          "combined_iast": "ko'pi",
+          "meaning": "anyone / someone",
+          "boundary": "अः + अ → ोऽ"
+        },
+        {
+          "word1": "सः",
+          "word2": "अवदत्",
+          "combined": "सोऽवदत्",
+          "word1_iast": "saḥ",
+          "word2_iast": "avadat",
+          "combined_iast": "so'vadat",
+          "meaning": "he said",
+          "boundary": "अः + अ → ोऽ"
+        },
+        {
+          "word1": "शिवः",
+          "word2": "अहम्",
+          "combined": "शिवोऽहम्",
+          "word1_iast": "śivaḥ",
+          "word2_iast": "aham",
+          "combined_iast": "śivo'ham",
+          "meaning": "I am Shiva",
+          "boundary": "अः + अ → ोऽ"
+        }
+      ],
+      "rule_name_hi": "उत्व सन्धि (ह्रस्व 'अ' परे होने पर)",
+      "rule_name_en": "Utva Sandhi before Short A (उत्वसन्धिः - अतो रोरप्लुतादप्लुते)",
+      "category_hi": "विसर्गसन्धिः",
+      "category_en": "Visarga Sandhi (विसर्गसन्धिः)",
+      "description_hi": "जब विसर्ग से पूर्व ह्रस्व 'अ' हो और बाद में भी ह्रस्व 'अ' आए, तो विसर्ग 'उ' बन जाता है। अ + उ मिलकर 'ओ' (गुण) तथा ओ + अ मिलकर 'ओऽ' (पूर्वरूप) हो जाता है।",
+      "description_en": "When a visarga derived from 'ru' is preceded by short 'a' and followed by short 'a', it transforms into 'u', which fuses into 'o', and the following 'a' becomes avagraha ऽ.",
+      "transformation_hi": "अः + अ → ोऽ",
+      "transformation_en": "aḥ (अः) + a (अ) → o' (ोऽ)",
+      "explanation_hi": "सूत्र ६.१.११३ (अतो रोरप्लुतादप्लुते) के अनुसार अप्लुत ह्रस्व 'अ' के बाद स्थित 'रु' को 'उ' आदेश होता है यदि आगे भी अप्लुत 'अ' हो। फिर गुण तथा पूर्वरूप होकर 'ओऽ' रूप बनता है।",
+      "explanation_en": "Sūtra 6.1.113 replaces 'ru' with 'u' between short unprotracted 'a' sounds. The resulting sequence a + u creates 'o' via Guṇa Sandhi, and o + a creates o' via Pūrvarūpa Sandhi."
+    },
+    {
+      "rule_id": "VIS_02",
+      "rule_name": "Utva Sandhi before Voiced Consonants (उत्वसन्धिः - हशि च)",
+      "category": "Visarga Sandhi (विसर्गसन्धिः)",
+      "sutra": "हशि च",
+      "sutra_roman": "Haśi ca",
+      "reference": "Pāṇini Aṣṭādhyāyī 6.1.114",
+      "pratyahara": "अतः रुः + हश् (haś)",
+      "description": "When a visarga preceded by short 'a' is followed by a voiced consonant ('haś' pratyāhāra), it becomes 'u', which then fuses with the preceding 'a' into 'o'.",
+      "transformation": "aḥ (अः) + voiced consonant → o (ो) + voiced consonant",
+      "conditions": {
+        "purva_ending": [
+          "अः"
+        ],
+        "uttara_beginning": [
+          "ग",
+          "घ",
+          "ङ",
+          "ज",
+          "झ",
+          "ञ",
+          "ड",
+          "ढ",
+          "ण",
+          "द",
+          "ध",
+          "न",
+          "ब",
+          "भ",
+          "म",
+          "य",
+          "र",
+          "ल",
+          "व",
+          "ह"
+        ],
+        "condition_type": "ah_before_voiced_consonant"
+      },
+      "explanation": "Sūtra 6.1.114 extends utva to positions where a voiced consonant (haś) follows. The combination of stem 'a' + 'u' yields 'o' (matra ो).",
+      "examples": [
+        {
+          "word1": "रामः",
+          "word2": "गच्छति",
+          "combined": "रामो गच्छति",
+          "word1_iast": "rāmaḥ",
+          "word2_iast": "gacchati",
+          "combined_iast": "rāmo gacchati",
+          "meaning": "Rama goes",
+          "boundary": "अः + ग → ो ग"
+        },
+        {
+          "word1": "शिवः",
+          "word2": "वन्द्यः",
+          "combined": "शिवो वन्द्यः",
+          "word1_iast": "śivaḥ",
+          "word2_iast": "vandyaḥ",
+          "combined_iast": "śivo vandyaḥ",
+          "meaning": "Shiva is worthy of veneration",
+          "boundary": "अः + व → ो व"
+        },
+        {
+          "word1": "बालः",
+          "word2": "हसति",
+          "combined": "बालो हसति",
+          "word1_iast": "bālaḥ",
+          "word2_iast": "hasati",
+          "combined_iast": "bālo hasati",
+          "meaning": "the boy laughs",
+          "boundary": "अः + ह → ो ह"
+        },
+        {
+          "word1": "बुद्धः",
+          "word2": "गच्छति",
+          "combined": "बुद्धो गच्छति",
+          "word1_iast": "buddhaḥ",
+          "word2_iast": "gacchati",
+          "combined_iast": "buddho gacchati",
+          "meaning": "the Buddha goes",
+          "boundary": "अः + ग → ो ग"
+        },
+        {
+          "word1": "देवः",
+          "word2": "दानवः",
+          "combined": "देवो दानवः",
+          "word1_iast": "devaḥ",
+          "word2_iast": "dānavaḥ",
+          "combined_iast": "devo dānavaḥ",
+          "meaning": "god and demon",
+          "boundary": "अः + द → ो द"
+        }
+      ],
+      "rule_name_hi": "उत्व सन्धि (घोष व्यञ्जन परे होने पर)",
+      "rule_name_en": "Utva Sandhi before Voiced Consonants (उत्वसन्धिः - हशि च)",
+      "category_hi": "विसर्गसन्धिः",
+      "category_en": "Visarga Sandhi (विसर्गसन्धिः)",
+      "description_hi": "जब विसर्ग से पूर्व ह्रस्व 'अ' हो और बाद में कोई घोष व्यञ्जन ('हश्') आए, तब विसर्ग 'उ' में बदलकर पूर्व 'अ' के साथ 'ओ' बन जाता है।",
+      "description_en": "When a visarga preceded by short 'a' is followed by a voiced consonant ('haś' pratyāhāra), it becomes 'u', which then fuses with the preceding 'a' into 'o'.",
+      "transformation_hi": "अः + घोष व्यञ्जन → ो + घोष व्यञ्जन",
+      "transformation_en": "aḥ (अः) + voiced consonant → o (ो) + voiced consonant",
+      "explanation_hi": "सूत्र ६.१.११४ (हशि च) के अनुसार ह्रस्व 'अ' से परे विसर्ग को घोष व्यञ्जन ('हश्') परे होने पर 'उ' आदेश होता है। अ + उ मिलकर गुण सन्धि से 'ओ' बन जाते हैं।",
+      "explanation_en": "Sūtra 6.1.114 extends utva to positions where a voiced consonant (haś) follows. The combination of stem 'a' + 'u' yields 'o'."
+    },
+    {
+      "rule_id": "VIS_03",
+      "rule_name": "Visarga Sibilant Sandhi (सत्वसन्धिः - विसर्जनीयस्य सः)",
+      "category": "Visarga Sandhi (विसर्गसन्धिः)",
+      "sutra": "विसर्जनीयस्य सः",
+      "sutra_roman": "Visarjanīyasya saḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.3.34",
+      "pratyahara": "विसर्जनीय + खर् (khar)",
+      "description": "A visarga followed by a voiceless stop consonant ('khar') transforms into the corresponding sibilant: 'ś' before palatals (c, ch), 'ṣ' before retroflexes (ṭ, ṭh), and 's' before dentals (t, th).",
+      "transformation": "ḥ + c/ch → ś (श्); ḥ + ṭ/ṭh → ṣ (ष्); ḥ + t/th → s (स्)",
+      "conditions": {
+        "purva_ending": [
+          "ः"
+        ],
+        "uttara_beginning": [
+          "च",
+          "छ",
+          "ट",
+          "ठ",
+          "त",
+          "थ"
+        ],
+        "condition_type": "visarga_before_unvoiced_stops"
+      },
+      "explanation": "Sūtra 8.3.34 converts visarga into 's' before khar consonants. Sūtra 8.4.40 subsequently converts this 's' to 'ś' before palatals (c, ch), and 8.4.41 converts it to 'ṣ' before retroflexes (ṭ, ṭh).",
+      "examples": [
+        {
+          "word1": "नमः",
+          "word2": "ते",
+          "combined": "नमस्ते",
+          "word1_iast": "namaḥ",
+          "word2_iast": "te",
+          "combined_iast": "namaste",
+          "meaning": "salutations to you",
+          "boundary": "ः + त → स्त"
+        },
+        {
+          "word1": "कः",
+          "word2": "चित्",
+          "combined": "कश्चित्",
+          "word1_iast": "kaḥ",
+          "word2_iast": "cit",
+          "combined_iast": "kaścit",
+          "meaning": "someone / a certain one",
+          "boundary": "ः + च → श्च"
+        },
+        {
+          "word1": "रामः",
+          "word2": "च",
+          "combined": "रामश्च",
+          "word1_iast": "rāmaḥ",
+          "word2_iast": "ca",
+          "combined_iast": "rāmaśca",
+          "meaning": "and Rama",
+          "boundary": "ः + च → श्च"
+        },
+        {
+          "word1": "धनुः",
+          "word2": "टङ्कार",
+          "combined": "धनुष्टङ्कार",
+          "word1_iast": "dhanuḥ",
+          "word2_iast": "ṭaṅkāra",
+          "combined_iast": "dhanuṣṭaṅkāra",
+          "meaning": "twang of the bow",
+          "boundary": "ः + ट → ष्ट"
+        },
+        {
+          "word1": "इतः",
+          "word2": "ततः",
+          "combined": "इतस्ततः",
+          "word1_iast": "itaḥ",
+          "word2_iast": "tataḥ",
+          "combined_iast": "itastataḥ",
+          "meaning": "here and there",
+          "boundary": "ः + त → स्त"
+        }
+      ],
+      "rule_name_hi": "सत्व सन्धि (विसर्जनीयस्य सः)",
+      "rule_name_en": "Visarga Sibilant Sandhi (सत्वसन्धिः - विसर्जनीयस्य सः)",
+      "category_hi": "विसर्गसन्धिः",
+      "category_en": "Visarga Sandhi (विसर्गसन्धिः)",
+      "description_hi": "जब विसर्ग के बाद कोई अघोष स्पर्श व्यञ्जन ('खर्') आता है, तो विसर्ग क्रमशः श्, ष् या स् में बदल जाता है (च/छ के आगे 'श्', ट/ठ के आगे 'ष्', त/थ के आगे 'स्')।",
+      "description_en": "A visarga followed by a voiceless stop consonant ('khar') transforms into the corresponding sibilant: 'ś' before palatals, 'ṣ' before retroflexes, and 's' before dentals.",
+      "transformation_hi": "ः + च/छ → श्च; ः + ट/ठ → ष्ट; ः + त/थ → स्त",
+      "transformation_en": "ḥ + c/ch → ś (श्); ḥ + ṭ/ṭh → ṣ (ष्); ḥ + t/th → s (स्)",
+      "explanation_hi": "सूत्र ८.३.३४ (विसर्जनीयस्य सः) के अनुसार 'खर्' परे होने पर विसर्ग का 'स्' होता है। आगे श्चुत्व (८.४.४०) से तालव्य के पूर्व 'श्' तथा ष्टुत्व (८.४.४१) से मूर्धन्य के पूर्व 'ष्' बन जाता है।",
+      "explanation_en": "Sūtra 8.3.34 converts visarga into 's' before khar consonants. Sūtra 8.4.40 subsequently converts this 's' to 'ś' before palatals, and 8.4.41 converts it to 'ṣ' before retroflexes."
+    },
+    {
+      "rule_id": "VIS_04",
+      "rule_name": "Rutva Sandhi (रुत्वसन्धिः - ससजुषो रुः)",
+      "category": "Visarga Sandhi (विसर्गसन्धिः)",
+      "sutra": "ससजुषो रुः",
+      "sutra_roman": "Sasajuṣo ruḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.2.66",
+      "pratyahara": "इच्/उच् (non-a/ā) + ः + अश् (aś)",
+      "description": "When a visarga is preceded by any vowel other than short or long 'a' (such as i, ī, u, ū, etc.) and followed by a vowel or voiced consonant ('aś'), the visarga transforms into 'r' (repha र्).",
+      "transformation": "V(not a/ā) + ḥ + vowel/voiced consonant → V + r (र्) + vowel/voiced consonant",
+      "conditions": {
+        "purva_ending": [
+          "इः",
+          "ईः",
+          "उः",
+          "ऊः",
+          "ऋः",
+          "एः",
+          "ऐः",
+          "ओः",
+          "औः"
+        ],
+        "uttara_beginning": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ",
+          "ए",
+          "ऐ",
+          "ओ",
+          "औ",
+          "ग",
+          "घ",
+          "ङ",
+          "ज",
+          "झ",
+          "ञ",
+          "ड",
+          "ढ",
+          "ण",
+          "द",
+          "ध",
+          "न",
+          "ब",
+          "भ",
+          "म",
+          "य",
+          "र",
+          "ल",
+          "व",
+          "ह"
+        ],
+        "condition_type": "non_a_visarga_before_voiced"
+      },
+      "explanation": "Sūtra 8.2.66 turns pada-final sibilant into 'ru'. When preceded by vowels other than a/ā, 'ru' is preserved as repha ('r') before all vowels and voiced consonants.",
+      "examples": [
+        {
+          "word1": "हरिः",
+          "word2": "आगच्छति",
+          "combined": "हरिरागच्छति",
+          "word1_iast": "hariḥ",
+          "word2_iast": "āgacchati",
+          "combined_iast": "harirāgacchati",
+          "meaning": "Hari arrives",
+          "boundary": "इः + आ → इरा"
+        },
+        {
+          "word1": "गुरुः",
+          "word2": "आज्ञा",
+          "combined": "गुरुराज्ञा",
+          "word1_iast": "guruḥ",
+          "word2_iast": "ājñā",
+          "combined_iast": "gururājñā",
+          "meaning": "the Guru's command",
+          "boundary": "उः + आ → उरा"
+        },
+        {
+          "word1": "भानुः",
+          "word2": "उदेति",
+          "combined": "भानुरुदेति",
+          "word1_iast": "bhānuḥ",
+          "word2_iast": "udeti",
+          "combined_iast": "bhānurudeti",
+          "meaning": "the sun rises",
+          "boundary": "उः + उ → उरु"
+        },
+        {
+          "word1": "मुनिः",
+          "word2": "गच्छति",
+          "combined": "मुनिर्गच्छति",
+          "word1_iast": "muniḥ",
+          "word2_iast": "gacchati",
+          "combined_iast": "munirgacchati",
+          "meaning": "the sage goes",
+          "boundary": "इः + ग → इर्ग"
+        },
+        {
+          "word1": "निः",
+          "word2": "धन",
+          "combined": "निर्धन",
+          "word1_iast": "niḥ",
+          "word2_iast": "dhana",
+          "combined_iast": "nirdhana",
+          "meaning": "poor / destitute",
+          "boundary": "इः + ध → इर्ध"
+        }
+      ],
+      "rule_name_hi": "रुत्व सन्धि (ससजुषो रुः)",
+      "rule_name_en": "Rutva Sandhi (रुत्वसन्धिः - ससजुषो रुः)",
+      "category_hi": "विसर्गसन्धिः",
+      "category_en": "Visarga Sandhi (विसर्गसन्धिः)",
+      "description_hi": "अ या आ से भिन्न स्वर (इ, ई, उ, ऊ आदि) के बाद स्थित विसर्ग के आगे यदि कोई स्वर अथवा घोष व्यञ्जन आए, तो विसर्ग रेफ ('र्') बन जाता है।",
+      "description_en": "When a visarga is preceded by any vowel other than short or long 'a' and followed by a vowel or voiced consonant, the visarga transforms into 'r' (repha र्).",
+      "transformation_hi": "इः/उः + स्वर/घोष → इर्/उर् + स्वर/घोष",
+      "transformation_en": "V(not a/ā) + ḥ + vowel/voiced consonant → V + r (र्) + vowel/voiced consonant",
+      "explanation_hi": "सूत्र ८.२.६६ (ससजुषो रुः) के अनुसार पदान्त सकार अथवा विसर्ग 'रु' बनता है। अवर्ण से भिन्न स्वर के बाद यह 'रु' रेफ ('र्') के रूप में सुरक्षित रहता है।",
+      "explanation_en": "Sūtra 8.2.66 turns pada-final sibilant into 'ru'. When preceded by vowels other than a/ā, 'ru' is preserved as repha ('r') before all vowels and voiced consonants."
+    },
+    {
+      "rule_id": "VIS_05",
+      "rule_name": "Visarga Lopa Sandhi (विसर्गलोपसन्धिः)",
+      "category": "Visarga Sandhi (विसर्गसन्धिः)",
+      "sutra": "भोभगोअघोअपूर्वस्य योऽशि, लोपः शाकल्यस्य, एतत्तदोः सुलोपः",
+      "sutra_roman": "Bhobhagoaghoapūrvasya yo'śi, Lopaḥ śākalyasya, Etattadoḥ sulopaḥ",
+      "reference": "Pāṇini Aṣṭādhyāyī 8.3.17, 8.3.19, 6.1.132",
+      "pratyahara": "आः/अः/सः/एषः + अश् (aś)",
+      "description": "Visarga is dropped (lopa) under three classical conditions: (1) After 'ā' (आः) before any vowel or voiced consonant; (2) After short 'a' (अः) before any vowel other than short 'a'; (3) In words 'saḥ' (सः) or 'eṣaḥ' (एषः) before any consonant.",
+      "transformation": "āḥ + voiced/vowel → ā; aḥ + non-a vowel → a; saḥ/eṣaḥ + consonant → sa/eṣa",
+      "conditions": {
+        "purva_ending": [
+          "आः",
+          "अः",
+          "सः",
+          "एषः"
+        ],
+        "uttara_beginning": [
+          "अ",
+          "आ",
+          "इ",
+          "ई",
+          "उ",
+          "ऊ",
+          "ऋ",
+          "ॠ",
+          "ऌ",
+          "ए",
+          "ऐ",
+          "ओ",
+          "औ",
+          "क",
+          "ख",
+          "ग",
+          "घ",
+          "ङ",
+          "च",
+          "छ",
+          "ज",
+          "झ",
+          "ञ",
+          "ट",
+          "ठ",
+          "ड",
+          "ढ",
+          "ण",
+          "त",
+          "थ",
+          "द",
+          "ध",
+          "न",
+          "प",
+          "फ",
+          "ब",
+          "भ",
+          "म",
+          "य",
+          "र",
+          "ल",
+          "व",
+          "श",
+          "ष",
+          "स",
+          "ह"
+        ],
+        "condition_type": "visarga_elision"
+      },
+      "explanation": "Sūtras 8.3.17 and 8.3.19 derive lopa via y-elision. When visarga preceded by 'ā' meets vowels or voiced consonants, or preceded by 'a' meets vowels other than 'a', visarga drops completely. Under 6.1.132, 'su' affix after 'saḥ' and 'eṣaḥ' is dropped before consonants.",
+      "examples": [
+        {
+          "word1": "बालाः",
+          "word2": "नमन्ति",
+          "combined": "बाला नमन्ति",
+          "word1_iast": "bālāḥ",
+          "word2_iast": "namanti",
+          "combined_iast": "bālā namanti",
+          "meaning": "the girls bow down",
+          "boundary": "आः + न → आ न (lopa)"
+        },
+        {
+          "word1": "देवाः",
+          "word2": "गच्छन्ति",
+          "combined": "देवा गच्छन्ति",
+          "word1_iast": "devāḥ",
+          "word2_iast": "gacchanti",
+          "combined_iast": "devā gacchanti",
+          "meaning": "the gods go",
+          "boundary": "आः + ग → आ ग (lopa)"
+        },
+        {
+          "word1": "रामः",
+          "word2": "आगच्छति",
+          "combined": "राम आगच्छति",
+          "word1_iast": "rāmaḥ",
+          "word2_iast": "āgacchati",
+          "combined_iast": "rāma āgacchati",
+          "meaning": "Rama arrives",
+          "boundary": "अः + आ → अ आ (lopa)"
+        },
+        {
+          "word1": "सूर्यः",
+          "word2": "उदेति",
+          "combined": "सूर्य उदेति",
+          "word1_iast": "sūryaḥ",
+          "word2_iast": "udeti",
+          "combined_iast": "sūrya udeti",
+          "meaning": "the sun rises",
+          "boundary": "अः + उ → अ उ (lopa)"
+        },
+        {
+          "word1": "सः",
+          "word2": "गच्छति",
+          "combined": "स गच्छति",
+          "word1_iast": "saḥ",
+          "word2_iast": "gacchati",
+          "combined_iast": "sa gacchati",
+          "meaning": "he goes",
+          "boundary": "सः + ग → स ग (lopa)"
+        },
+        {
+          "word1": "एषः",
+          "word2": "पठति",
+          "combined": "एष पठति",
+          "word1_iast": "eṣaḥ",
+          "word2_iast": "paṭhati",
+          "combined_iast": "eṣa paṭhati",
+          "meaning": "this one reads",
+          "boundary": "एषः + प → एष प (lopa)"
+        }
+      ],
+      "rule_name_hi": "विसर्गलोप सन्धि (विसर्गलोपसन्धिः)",
+      "rule_name_en": "Visarga Lopa Sandhi (विसर्गलोपसन्धिः)",
+      "category_hi": "विसर्गसन्धिः",
+      "category_en": "Visarga Sandhi (विसर्गसन्धिः)",
+      "description_hi": "विसर्ग का लोप (गायब होना): (१) 'आः' के बाद स्वर या घोष व्यञ्जन आने पर; (२) 'अः' के बाद 'अ' से भिन्न स्वर आने पर; (३) 'सः' तथा 'एषः' के बाद कोई व्यञ्जन आने पर।",
+      "description_en": "Visarga is dropped (lopa): (1) After 'ā' (आः) before any vowel or voiced consonant; (2) After short 'a' (अः) before any vowel other than short 'a'; (3) In words 'saḥ' or 'eṣaḥ' before any consonant.",
+      "transformation_hi": "आः + स्वर/घोष → आ; अः + भिन्न स्वर → अ; सः/एषः + व्यञ्जन → स/एष",
+      "transformation_en": "āḥ + voiced/vowel → ā; aḥ + non-a vowel → a; saḥ/eṣaḥ + consonant → sa/eṣa",
+      "explanation_hi": "सूत्र ८.३.१७ (भोभगोअघोअपूर्वस्य योऽशि), ८.३.१९ (लोपः शाकल्यस्य) तथा ६.१.१३२ (एतत्तदोः सुलोपः) के अनुसार यकार-लोप द्वारा विसर्ग का लोप सम्पन्न होता है।",
+      "explanation_en": "Sūtras 8.3.17 and 8.3.19 derive lopa via y-elision. When visarga preceded by 'ā' meets vowels or voiced consonants, or preceded by 'a' meets vowels other than 'a', visarga drops completely."
+    }
+  ]
+}
